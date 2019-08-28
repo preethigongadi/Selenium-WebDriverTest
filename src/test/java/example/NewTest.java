@@ -24,7 +24,7 @@ public class NewTest {
   
   @BeforeClass
   public void beforeClass() {
-	  System.setProperty("webdriver.chrome.driver", "/home/ubuntu/chromedriver");
+	  System.setProperty("webdriver.chrome.driver", "/home/preethi/chromedriver");
 	  ChromeOptions options = new ChromeOptions();
 	  options.addArguments("--headless");
 	  driver = new ChromeDriver(options);  
