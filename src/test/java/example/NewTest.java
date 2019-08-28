@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 
@@ -23,15 +24,16 @@ public class NewTest {
   
   @BeforeClass
   public void beforeClass() {
-	  System.setProperty("webdriver.chrome.driver", "/home/ubuntu/chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "/home/ubuntu/chromedriver");
 	  ChromeOptions options = new ChromeOptions();
 	  options.addArguments("--headless");
 	  driver = new ChromeDriver(options);  
   }
 
-  @AfterTest
-	public void afterTest() {
-		driver.quit();			
-	}	
+ @AfterClass
+  
+  public void afterClass() {
+  }
+	
 
 }
